@@ -10,6 +10,14 @@
   </head>
 
   <body>
+  <div>
+  <%= link_to 'Sign up', new_user_path %>
+  </div>
+
+      <% flash.each do |name,msg| %>
+      <%= content_tag :div, msg, id: "flash_#{name}" %>
+      <% end %>
+
     <%= yield %>
   </body>
 </html>
