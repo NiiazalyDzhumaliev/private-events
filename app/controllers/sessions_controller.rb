@@ -3,9 +3,9 @@ class SessionsController < ApplicationController
     end
 
     def create
-        @user = User.find(params[:username])
+        @user = User.find_by_username(params[:username])
         
-        if user
+        if @user
             session[:current_user_id] = @user_id       
             flash[:success] = "Logged in"
             redirect_to root
