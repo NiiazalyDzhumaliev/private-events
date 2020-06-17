@@ -9,7 +9,7 @@
   <% @events.each do |event| %>
    <tr>
     <td><%= event.title %></td>
-    <td><%= event.desc %></td>
+    <td><%= link_to event.desc, event_path(event.id)%></td>
     <td><%= event.location %></td>
     <td><%= event.date %></td>
   </tr>

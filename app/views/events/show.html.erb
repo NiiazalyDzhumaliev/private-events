@@ -1,1 +1,4 @@
-<p><%= @event.creator.username %></p>
+<%@event.attendees.each do |attendee|%>
+    <p><%= attendee.username %></p>
+<%end%>
+<%=link_to "List of all Events", events_path%>
