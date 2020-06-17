@@ -7,7 +7,7 @@
     <th>Location</th>
     <th>Date</th>
   </tr>
-  <% @events.each do |event| %>
+  <% @user.attended_events.each do |event| %>
    <tr>
     <td><%= event.title %></td>
     <td><%= event.desc %></td>
