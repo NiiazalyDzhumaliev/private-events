@@ -2,19 +2,15 @@
 
 <h1>Previous Events</h1>
 <p>
-    <span>Title<span>
-    <span> Description<span>
-    <span>Location<span>
-    <span>Date<span>
+    <strong><span>Description<span></strong>
+    <strong><span>Date<span></strong>
   </p>
   <%= render partial: 'event', collection:  @user.attended_events.previous_events %>
  
-  <h1>upcoming Events</h1>
-  <p>
-    <span>Title<span>
-    <span> Description<span>
-    <span>Location<span>
-    <span>Date<span>
+  <h1>Upcoming Events</h1>
+  <p>    
+   <strong><span>Description<span></strong>
+    <strong><span>Date<span></strong>
   </p>
   <%= render partial: 'event', collection:  @user.attended_events.upcoming_events %>
 
