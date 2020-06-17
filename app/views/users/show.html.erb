@@ -1,17 +1,18 @@
 <p><strong><%=@user.username%></strong></p>
 
-<h1>Previous Events</h1>
+<h1>Previous Attended Events</h1>
 <p>
     <strong><span>Description<span></strong>
     <strong><span>Date<span></strong>
   </p>
   <%= render partial: 'event', collection:  @user.attended_events.previous_events %>
  
-  <h1>Upcoming Events</h1>
+  <h1>Upcoming Attending Events</h1>
   <p>    
     <strong><span>Description<span></strong>
     <strong><span>Date<span></strong>
   </p>
   <%= render partial: 'event', collection:  @user.attended_events.upcoming_events %>
+  <%=link_to "All Events", root_path%>
 
 
