@@ -1,4 +1,10 @@
 <p><strong><%=@user.username%></strong></p>
+<h1>User has created:</h1>
+
+<%@user.events.each do |event|%>
+  <p><%=event.desc%></p>
+<%end%>
+
 
 <h1>Previous Attended Events</h1>
 <p>
