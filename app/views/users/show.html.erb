@@ -3,7 +3,7 @@
 
 <%@user.events.each do |event|%>
   <p><%=event.desc%></p>
-  <p><%= link_to 'Invite users', invite_path %></p>
+  <p><%= link_to 'Invite users', new_event_event_attendances_path(event) %></p>
 <%end%>
 
 
