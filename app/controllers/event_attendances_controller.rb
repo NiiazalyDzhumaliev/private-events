@@ -7,8 +7,29 @@ class EventAttendancesController < ApplicationController
   def create
     @event = Event.find(params[:event_id])
 
-    @event_attendance = @event.event_attendances.create(att_params)
-    redirect_to article_path(@article)    
+    # @event_attendance = @event.event_attendances.create(att_params)
+    # redirect_to event_event_attendances_path  
+    params[:event_attendance][:event_attendee_id].each do |x|
+      @event_attendance = EventAttendance.new
+      @event_attendance.event_attendee = User.find(x.to_i)
+      @event_attendance.attended_event = @event
+     
+
+        if @event_attendance.save
+          flash[:success] = "Event successfully created"
+          # redirect_to events_path
+        else
+          flash[:error] = "Something went wrong"
+          render 'new'
+        end
+      
+      
+    end
+    # render plain: params[:event_attendance]
+  end
+
+  def show
+    @event_attendance = EventAttendance.find(params[:id])
   end
 
   def att_params

@@ -1,5 +1,4 @@
 <h1>EventAttendances#new</h1>
-<p><%= @event.id %></p>
 <%= form_for [@event,@event.event_attendances.build] do |f| %>
 <!--<%= f.collection_check_boxes :event_attendee_id, User.all, :id, :username %>-->
 
