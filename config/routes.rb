@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout' 
-  resources :users
+   resources :users
   resources :sessions, only: [:new,:create,:destroy]
-  resources :events
+  resources :events do
+    resource :event_attendance
+  end
   root "events#index"
 end
