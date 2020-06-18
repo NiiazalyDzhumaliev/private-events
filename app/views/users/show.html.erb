@@ -2,8 +2,9 @@
 <h1>User has created:</h1>
 
 <%@user.events.each do |event|%>
-  <p><%=event.desc%></p>
-  <p><%= link_to 'Invite users', new_event_event_attendances_path(event) %></p>
+  <span><%=event.desc%></span>
+  <span><%= link_to 'Invite users', new_event_event_attendances_path(event) %></span>
+  <br/>
 <%end%>
 
 
