@@ -17,7 +17,7 @@ class EventAttendancesController < ApplicationController
 
         if @event_attendance.save
           flash[:success] = "Event successfully created"
-          # redirect_to events_path
+          
         else
           flash[:error] = "Something went wrong"
           render 'new'
@@ -25,7 +25,8 @@ class EventAttendancesController < ApplicationController
       
       
     end
-    # render plain: params[:event_attendance]
+
+    redirect_to user_path(@event.creator)
   end
 
   def show
