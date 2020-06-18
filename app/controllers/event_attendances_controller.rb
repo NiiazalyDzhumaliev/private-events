@@ -6,9 +6,9 @@ class EventAttendancesController < ApplicationController
 
   def create
     @event = Event.find(params[:event_id])
-    
-    @event_attendance = @event.event_attendances.create(comment_params)
-    redirect_to article_path(@article)       
+
+    @event_attendance = @event.event_attendances.create(att_params)
+    redirect_to article_path(@article)    
   end
 
   def att_params
