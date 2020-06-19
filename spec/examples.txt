@@ -1,0 +1,5 @@
+example_id                                               | status  | run_time        |
+-------------------------------------------------------- | ------- | --------------- |
+./spec/helpers/event_attendances_helper_spec.rb[1:1]     | pending | 0.00003 seconds |
+./spec/models/user_spec.rb[1:1:1]                        | passed  | 0.02863 seconds |
+./spec/requests/event_attendances_request_spec.rb[1:1:1] | failed  | 0.29701 seconds |
