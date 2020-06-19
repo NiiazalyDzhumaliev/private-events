@@ -17,6 +17,11 @@ RSpec.describe User, :type => :model do
       it "is valid with valid attributes" do
         expect(User.create).to_not be_valid
       end
+
+      it "is not valid without a username" do
+        # let!(:user_u) { User.create(username: nil) }
+        expect(User.new(username: nil)).to_not be_valid
+      end
     end
   
     # it "new user has no friendships" do
