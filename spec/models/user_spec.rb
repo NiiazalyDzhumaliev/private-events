@@ -11,4 +11,10 @@ RSpec.describe User, :type => :model do
         expect(User.new(username: nil)).to_not be_valid
       end
     end
+
+    context 'ActiveRecord associations' do
+      it 'has many events' do
+        expect(User.reflect_on_association(:events).macro).to be (:has_many)
+      end
+    end
 end

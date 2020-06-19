@@ -16,5 +16,9 @@ RSpec.describe Event, :type => :model do
     end
   end
 
-    
+  context 'ActiveRecord associations' do
+    it 'belongs to creator' do
+      expect(Event.reflect_on_association(:creator).macro).to be (:belongs_to)
+    end
+  end    
 end
