@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe EventAttendance, type: :model do
-   let(:user) {User.create(username: 'username')}
-   let(:event) {user.events.create(desc: 'New Event', date: '2020-06-28')}
+  let(:user) { User.create(username: 'username') }
+  let(:event) { user.events.create(desc: 'New Event', date: '2020-06-28') }
 
-   context 'A created event should belong to a user as its creator' do
+  context 'A created event should belong to a user as its creator' do
     it 'It should check for an event creator_id and return it' do
       expect(event.creator.username).to eq(user.username)
     end
