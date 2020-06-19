@@ -5,13 +5,13 @@
     <strong><span>Description<span></strong>
     <strong><span>Date<span></strong>
   </p>
-  <%= render partial: 'users/event', collection:  @events.previous_events %>
+  <%= render partial: 'users/event', collection:  @past_events %>
  
   <h1>Upcoming Events</h1>
   <p>    
     <strong><span>Description<span></strong>
     <strong><span>Date<span></strong>
   </p>
-  <%= render partial: 'users/event', collection:  @events.upcoming_events %>
+  <%= render partial: 'users/event', collection:  @upcoming_events %>
 
 
