@@ -18,7 +18,7 @@ class EventAttendancesController < ApplicationController
     else
       flash[:error] = 'Something went wrong'
       render 'new'
-  end
+    end
   end
 
   def show

@@ -5,9 +5,9 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def authenticate_user
-    if current_user.nil?
-      flash[:alert] = 'Login required'
-      redirect_to login_path
-    end
+    return unless current_user.nil?
+
+    flash[:alert] = 'Login required'
+    redirect_to login_path
   end
 end
