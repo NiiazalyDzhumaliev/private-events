@@ -1,0 +1,12 @@
+<h1>EventAttendances#new</h1>
+<%= form_for [@event,@event.event_attendances.build] do |f| %>
+<!--<%= f.collection_check_boxes :event_attendee_id, User.all, :id, :username %>-->
+
+    <% User.all.each do |user| %>
+    <p>
+        <%= f.check_box :event_attendee_id, { multiple: true }, user.id, false %>
+        <%= f.label user.username %>
+        </p>
+    <% end %>
+    <%= f.submit "Invite Users" %>
+<%end%>

@@ -10,6 +10,16 @@
   </head>
 
   <body>
+
+   <div>
+     <%= user_actions(current_user) %>
+     <%=link_to('All Events', root_path)%>
+  </div>
+
+      <% flash.each do |name,msg| %>
+      <%= content_tag :div, msg, id: "flash_#{name}" %>
+      <% end %>
+
     <%= yield %>
   </body>
 </html>

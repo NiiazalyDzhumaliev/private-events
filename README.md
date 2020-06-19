@@ -1,24 +1,58 @@
-# README
+# Private Events - Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> Private Events is a project created to practice Rails associations. The app includes user creation and login, event creation, and attending events.
 
-Things you may want to cover:
+## Models created
 
-* Ruby version
+- User
+- Event
+- EventAttending
 
-* System dependencies
+## Built With
 
-* Configuration
+- Ruby 2.7.0
+- Rails 6.0.2
 
-* Database creation
+## Usage
 
-* Database initialization
+You can clone or download this repo (you need ruby installed in your computer).
 
-* How to run the test suite
+    git clone git@github.com:NiiazalyDzhumaliev/private-events.git
 
-* Services (job queues, cache servers, search engines, etc.)
+Move to the app directory.
 
-* Deployment instructions
+    cd private-events
 
-* ...
+And finally, run the next instruction to get the gems that are needed for this project.
+    
+    bundle install
+
+## Screenshot
+
+![screenshot](app/assets/images/screenshot.png)
+
+## How to run test cases
+
+Type next command to run unit tests.
+
+    rspec spec/models
+
+## Author 1
+
+- Github: [@NiiazalyDzhumaliev](https://github.com/NiiazalyDzhumaliev)
+- Twitter: [@Niiazaly1](https://twitter.com/Niiazaly1)
+- Linkedin: [Niiazaly Dzhumaliev ](https://www.linkedin.com/in/niiazaly-dzhumaliev-117707132/)
+
+## Author 2
+
+- Github: [@hillarioh](https://github.com/hillarioh)
+- Twitter: [@hillaokri](https://twitter.com/hillaokri)
+- Linkedin: [@HillaryOkerio](https://www.linkedin.com/in/hillaryokerio/)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
