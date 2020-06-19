@@ -1,27 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe EventAttendance, :type => :model do
-    # let!(:user1) { User.create(username: 'test_user1') }
-    # let!(:user2) { User.create(username: 'test_user2') }
-    # let!(:user3) { User.create(username: 'test_user3') }
-
-    # context "with 2 or more comments" do
-    #   it "orders them in reverse chronologically" do
-    #     puts "Hilla"
-    #     # post = Post.create!
-    #     # comment1 = post.comments.create!(:body => "first comment")
-    #     # comment2 = post.comments.create!(:body => "second comment")
-    #     expect(post.reload.comments).to eq([comment2, comment1])
-    #   end
-    # end
-  
-    # it "new user has no friendships" do
-    #   # expect(user1.friendships.length).to eq 0
-    # end
-  
-    # it "can add another user as a friend" do
-    #   # user2 = User.create(email: 'test_user2@example.com', password: 'testtest', password_confirmation: 'testtest')
-    #   # user1.request_friendship(friend: user2)
-    #   # expect(user1.friendships.length).to eq 1
-    # end
+    context "Check for validation of Event attendance input" do
+        it "is valid with valid attributes" do
+          expect(EventAttendance.create).to_not be_valid
+        end
+    
+        it "is not valid without a event_id" do
+          expect(EventAttendance.new(event_attendee_id: nil)).to_not be_valid
+        end
+    
+        it "is not valid without a attendee_id" do
+          expect(EventAttendance.new(:attended_event_id: nil)).to_not be_valid
+        end
+      end
 end
