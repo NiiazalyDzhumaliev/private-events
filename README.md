@@ -53,7 +53,7 @@ Type next command to run unit tests.
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/NiiazalyDzhumaliev/private-events/issues.
 
 ## Show your support
 
